@@ -16,7 +16,8 @@ const getItems = (url, num) => {
         .then(response => response.json())
         .then(data => {
             console.log('data', data);
-            document.getElementById(`rand-advice-${num}`).innerHTML = data.slip.advice;
+            if (data.slip.advice) 
+                document.getElementById(`rand-advice-${num}`).innerHTML = data.slip.advice;
         })
         .catch(error => console.error('Unable to get items.', error));
 }
@@ -33,3 +34,5 @@ const getItemsById = (url) => {
 getItems(uri, 1);
 getItems(uri, 2);
 getItems(uri, 3);
+getItems(uriByQuery);
+getItemsById(uriById);
