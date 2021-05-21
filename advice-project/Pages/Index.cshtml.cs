@@ -24,8 +24,6 @@ namespace advice_project.Pages
 
         public async void OnGet()
         {
-            Console.WriteLine("Start");
-            // Call asynchronous network methods in a try/catch block to handle exceptions.
             try
             {
                 HttpResponseMessage response = await client.GetAsync("https://api.adviceslip.com/advice");
