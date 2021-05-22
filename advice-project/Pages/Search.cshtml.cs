@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace advice_project.Pages
 {
-    public class PrivacyModel : PageModel
+    public class SearchModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<SearchModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public SearchModel(ILogger<SearchModel> logger)
         {
             _logger = logger;
         }
