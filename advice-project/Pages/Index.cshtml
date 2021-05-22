@@ -1,36 +1,35 @@
-﻿@page
+﻿
+@page
 @model IndexModel
+
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Random advice</h5>
-                <p class="card-text" id="rand-advice-1"></p>
-                <a href="#" class="btn btn-primary">Like</a>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Random advice</h5>
-                <p class="card-text" id="rand-advice-2"></p>
-                <a href="#" class="btn btn-primary">Like</a>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Random advice</h5>
-                <p class="card-text" id="rand-advice-3"></p>
-                <a href="#" class="btn btn-primary">Like</a>
-            </div>
-        </div>
-
+    <h1 class="mb-5 display-4">Welcome</h1>
+    <div class="jumbotron">
+        <h1 class="display-6">Advice for today</h1>
+        <p class="lead advice__text">@Model.AdviceText</p>
+        <p class="lead">@Model.TodayDate</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-outline-primary btn-lg" asp-action="check" role="button">Pick another one</a>
+        </p>
     </div>
+
+    @*<div class="card text-center">
+        <div class="card-header">
+            
+            <h3 class="card-title">Advice for today</h3>
+        </div>
+        <div class="card-body">
+           
+            <p class="card-text">@Model.AdviceText</p>
+            <a href="#" class="btn btn-outline-primary">Pick another one</a>
+        </div>
+        <div class="card-footer text-muted">
+            @Model.TodayDate
+        </div>
+    </div>*@
 </div>

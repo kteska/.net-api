@@ -19,24 +19,39 @@ namespace advice_project.Pages
             _logger = logger;
         }
 
-        static readonly HttpClient client = new HttpClient();
-        public IList<String> Advice { get; set; }
+        public string AdviceText { get; set; }
 
-        public async void OnGet()
+        public string TodayDate { get; set; }
+
+        static readonly HttpClient client = new HttpClient();
+
+        //public async void OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
             try
             {
                 HttpResponseMessage response = await client.GetAsync("https://api.adviceslip.com/advice");
+                //string responseBody2 = await client.GetStringAsync("https://api.adviceslip.com/advice");
                 response.EnsureSuccessStatusCode();
+
                 string responseBody = await response.Content.ReadAsStringAsync();
-                // string responseBody = await client.GetStringAsync(uri);
-                Console.WriteLine(responseBody);
+                responseBody = responseBody.Trim('{', '}').Split(":")[3];
+
+                AdviceText = responseBody;
+                TodayDate = DateTime.UtcNow.Date.ToString("dd.MM.yyyy");
             }
             catch (HttpRequestException e)
             {
                 Console.WriteLine("\nHTTPRequest Exception");
                 Console.WriteLine("Message :{0} ", e.Message);
             }
+            return Page();
         }
+
+        public IActionResult check()
+        {
+            return Page();
+        }
+
     }
 }
