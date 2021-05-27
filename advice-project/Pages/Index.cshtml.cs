@@ -25,13 +25,11 @@ namespace advice_project.Pages
 
         static readonly HttpClient client = new HttpClient();
 
-        //public async void OnGet()
         public async Task<IActionResult> OnGetAsync()
         {
             try
             {
                 HttpResponseMessage response = await client.GetAsync("https://api.adviceslip.com/advice");
-                //string responseBody2 = await client.GetStringAsync("https://api.adviceslip.com/advice");
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
