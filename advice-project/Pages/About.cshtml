@@ -4,13 +4,28 @@
     ViewData["Title"] = "About";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<p class="lead">Aplikacja Advice Project</p>
-<p class="lead">Co umożliwia...</p>
-<p class="lead">Technologie:</p>
-<ul>
-    <li class="lead">C#</li>
-    <li class="lead">ASP.NET Core</li>
-    <li class="lead">Bootstrap</li>
-</ul>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'
+      type='text/css'>
+<div class="text-center">
+    <h1 class="mb-5 display-4 font-weight-bold">About the Project</h1>
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="lead font-weight-bold">Aplikacja udostępnia dane z Advice API oraz umożliwia wyświetlenie porad na dwa spsoby:</p>
+            <ul>
+                <li class="lead">wyswietlenie losowej porady z Advice API</li>
+                <li class="lead">wyświetlenie porad za pomocą wyszukiwarki</li>
+            </ul>
+            <p class="lead font-weight-bolder">W projekcie zostały wykorzystane poniższe technologie:</p>
+            <ul>
+                <li class="lead">ASP.NET Core</li>
+                <li class="lead">Bootstrap</li>
+            </ul>
+        </div>
+        <div class="col">
+            <p><img id="photo" src="@Url.Content("~/images/about-image.png")" /></p>
+        </div>
+    </div>
+</div>

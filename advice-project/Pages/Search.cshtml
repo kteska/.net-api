@@ -3,7 +3,13 @@
 @{
     ViewData["Title"] = "Search";
 }
-<h1>@ViewData["Title"]</h1>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'
+      type='text/css'>
+<div class="text-center">
+    <h1 class="mb-5 display-4 font-weight-bold">Search</h1>
+</div>
+
+<p class="lead">for advice...</p>
 
 <form class="form-horizontal" method="post">
     <div class="form-group">
@@ -11,7 +17,7 @@
             <input type="text" class="form-control" name="Query">
         </div>
     </div>
-    
+
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-outline-primary">Search</button>
@@ -21,10 +27,10 @@
 </form>
 
 @foreach (string advice in @Model.Advices)
- {
+{
     <div class="card text-center">
         <div class="card-body">
             <p class="card-text lead">@(advice)</p>
         </div>
     </div>
- }
+}
