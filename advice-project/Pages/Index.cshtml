@@ -5,15 +5,27 @@
     ViewData["Title"] = "Home page";
 }
 
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'
+      type='text/css'>
+<style src="~/css/site.css"></style>
 <div class="text-center">
-    <h1 class="mb-5 display-4">Welcome</h1>
-    <div class="jumbotron">
-        <h1 class="display-6">Advice for today</h1>
-        <p class="lead advice__text">@Model.AdviceText</p>
-        <p class="lead">@Model.TodayDate</p>
-        <hr class="my-4">
-        <p class="lead">
-            <a class="btn btn-outline-primary btn-lg" asp-action="check" role="button">Pick another one</a>
-        </p>
+    <h1 class="mb-5 display-4 font-weight-bold">Welcome to the Advice App!</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p><img id="photo" src="@Url.Content("~/images/home-image.png")" /></p>
+        </div>
+        <div class="col">
+            <div class="jumbotron bg-white ml-5 text-center">
+                <h1 class="display-6">Advice for today</h1>
+                <p class="lead advice__text">@Model.AdviceText</p>
+                <p class="lead">@Model.TodayDate</p>
+                <hr class="my-4">
+                <p class="lead">
+                    <a class="btn btn-outline-primary btn-lg" asp-action="check" role="button">Pick another one</a>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
