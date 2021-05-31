@@ -16,7 +16,7 @@ On the main page, the user has the option to get a random advice.
 
 ## Search functionality
 ![search](https://user-images.githubusercontent.com/63778196/120209809-65acb180-c22f-11eb-8545-f78a71fed811.png)
-The user can search for advice by the keyword, e.g. life or time. When he enters the word, advices, which are related to this keyword, will be displayed.
+The user can search for advice by the keyword, e.g. life or time. When the user enters the word, advices related to this keyword will be displayed.
 
 
 ![about](https://user-images.githubusercontent.com/63778196/120209813-66454800-c22f-11eb-8bc2-46ee9b3a3755.png)
